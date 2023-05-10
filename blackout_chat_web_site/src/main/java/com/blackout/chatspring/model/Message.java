@@ -23,5 +23,5 @@ public class Message implements Serializable {
 
     private String time, text;
     private UUID sender;
-    private boolean isResponse;
+    private boolean isAdmin;
 }

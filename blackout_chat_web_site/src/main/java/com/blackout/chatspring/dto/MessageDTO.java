@@ -15,7 +15,4 @@ public class MessageDTO {
 
     @NotNull
     private UUID sender;
-
-    @NotNull
-    private boolean isReponse;
 }

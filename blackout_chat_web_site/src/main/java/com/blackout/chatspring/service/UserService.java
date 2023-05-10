@@ -35,6 +35,12 @@ public class UserService {
         userRepository.deleteById(user);
     }
 
+    public void isAdmin(UUID id) {
+        var user = findById(id);
+        user.setAdmin(true);
+        userRepository.save(user);
+    }
+
     public void endChat(UUID id) {
         var user = findById(id);
         user.setChatEnded(true);

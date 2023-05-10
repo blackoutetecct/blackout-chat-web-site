@@ -19,8 +19,8 @@ public class MessageController {
     private final MessageService messageService;
 
     @PostMapping("/send")
-    public ResponseEntity<Message> send(@RequestBody @Valid MessageDTO message) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(message));
+    public ResponseEntity<Message> send(@RequestParam UUID response, @RequestBody @Valid MessageDTO message) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(response, message));
     }
 
     @GetMapping("/all")

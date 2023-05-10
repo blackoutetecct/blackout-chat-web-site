@@ -7,7 +7,7 @@ import org.springframework.beans.BeanUtils;
 public class MessageMapper {
     public Message toMapper(MessageDTO objetoEntrada) {
         Message objetoSaida = new Message();
-        BeanUtils.copyProperties(objetoSaida, objetoSaida);
+        BeanUtils.copyProperties(objetoEntrada, objetoSaida);
         return objetoSaida;
     }
 }

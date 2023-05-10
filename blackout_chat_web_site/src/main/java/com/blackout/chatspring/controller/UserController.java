@@ -23,6 +23,12 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
     }
 
+    @PutMapping("/admin")
+    public ResponseEntity<Void> isAdmin(@RequestParam UUID id) {
+        userService.isAdmin(id);
+        return ResponseEntity.status(HttpStatus.OK).body(null);
+    }
+
     @PutMapping("")
     public ResponseEntity<Void> endChat(@RequestParam UUID id) {
         userService.endChat(id);

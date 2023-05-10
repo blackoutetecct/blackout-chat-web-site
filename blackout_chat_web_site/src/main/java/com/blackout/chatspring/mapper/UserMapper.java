@@ -7,7 +7,7 @@ import org.springframework.beans.BeanUtils;
 public class UserMapper {
     public User toMapper(UserDTO objetoEntrada) {
         User objetoSaida = new User();
-        BeanUtils.copyProperties(objetoSaida, objetoSaida);
+        BeanUtils.copyProperties(objetoEntrada, objetoSaida);
         return objetoSaida;
     }
 }
