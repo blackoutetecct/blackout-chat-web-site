@@ -20,19 +20,12 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-    private final MessageRepository messageRepository;
 
     @Transactional
     public User save(UserDTO userDTO) {
         return userRepository.save(
                 setTime(new UserMapper().toMapper(userDTO))
         );
-    }
-
-    @Transactional
-    public void deleteFull(UUID user) {
-        messageRepository.deleteAllBySender(user);
-        userRepository.deleteById(user);
     }
 
     public void isAdmin(UUID id) {

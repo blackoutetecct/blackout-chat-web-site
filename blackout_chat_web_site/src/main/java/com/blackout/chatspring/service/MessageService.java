@@ -33,6 +33,11 @@ public class MessageService {
         );
     }
 
+    @Transactional
+    public void deleteFull(UUID sender) {
+        messageRepository.deleteAllBySender(sender);
+    }
+
     public List<Message> listAll(){
         return messageRepository.findAll();
     }

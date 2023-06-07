@@ -35,12 +35,6 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
-    @DeleteMapping("")
-    public ResponseEntity<Void> delete(@RequestParam UUID userId) {
-        userService.deleteFull(userId);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
-    }
-
     @GetMapping("/all")
     public ResponseEntity<List<User>> listAll() {
         return ResponseEntity.status(HttpStatus.OK).body(userService.listAll());

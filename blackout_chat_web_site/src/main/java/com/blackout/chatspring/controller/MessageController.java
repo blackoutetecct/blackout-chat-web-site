@@ -23,6 +23,12 @@ public class MessageController {
         return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(response, message));
     }
 
+    @DeleteMapping("")
+    public ResponseEntity<Void> deleteMessageBySender(@RequestParam UUID userId) {
+        messageService.deleteFull(userId);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<Message>> listAll() {
         return ResponseEntity.status(HttpStatus.OK).body(messageService.listAll());
