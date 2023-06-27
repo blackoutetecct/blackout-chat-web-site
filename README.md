@@ -5,6 +5,10 @@
 </p>
 
 #
+### HOSPEDADO
+- https://chatblackout-production.up.railway.app
+
+#
 ### TECNOLOGIAS
 
 ![Java](https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0D1117)&nbsp;
