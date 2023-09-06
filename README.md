@@ -5,10 +5,6 @@
 </p>
 
 #
-### HOSPEDADO
-- https://chatblackout-production.up.railway.app
-
-#
 ### TECNOLOGIAS
 
 ![Java](https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0D1117)&nbsp;
@@ -20,8 +16,15 @@
 ![POSTGRESQL](https://img.shields.io/badge/PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&labelColor=0D1117)&nbsp;
 
 #
+### DOMINIO DA API
+
+```
+https://blackoutchatwebsite-production.up.railway.app
+```
+
+#
 ### DOCUMENTACAO DA API
 
 ```
-<host>:<porta>/swagger-ui/index.html#
+https://blackoutchatwebsite-production.up.railway.app/swagger-ui/index.html
 ```
