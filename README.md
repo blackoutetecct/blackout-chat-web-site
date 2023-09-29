@@ -19,12 +19,12 @@
 ### DOMINIO DA API
 
 ```
-https://blackoutchatwebsite-production.up.railway.app
+https://blackout-chat-web-site-production.up.railway.app
 ```
 
 #
 ### DOCUMENTACAO DA API
 
 ```
-https://blackoutchatwebsite-production.up.railway.app/swagger-ui/index.html
+https://blackout-chat-web-site-production.up.railway.app/swagger-ui/index.html
 ```
