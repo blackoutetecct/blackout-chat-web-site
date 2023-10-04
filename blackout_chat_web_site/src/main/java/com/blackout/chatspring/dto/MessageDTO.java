@@ -15,7 +15,4 @@ public class MessageDTO {
 
     @NotNull
     private UUID session;
-
-    @NotNull
-    private boolean isAdmin;
 }

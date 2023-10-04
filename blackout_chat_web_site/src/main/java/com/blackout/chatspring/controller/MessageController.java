@@ -20,7 +20,12 @@ public class MessageController {
 
     @PostMapping("")
     public ResponseEntity<MessageModel> sendMessage(@RequestBody @Valid MessageDTO message) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(message));
+        return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(message, false));
+    }
+
+    @PostMapping("/adm")
+    public ResponseEntity<MessageModel> sendMessageAdm(@RequestBody @Valid MessageDTO message) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(messageService.save(message, true));
     }
 
     @DeleteMapping("")

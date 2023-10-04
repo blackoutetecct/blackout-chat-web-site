@@ -20,10 +20,10 @@ public class MessageService {
     private final SessionRepository sessionRepository;
 
     @Transactional
-    public MessageModel save(MessageDTO message) {
+    public MessageModel save(MessageDTO message, boolean isAdmin) {
         verifySession(message.getSession());
         return messageRepository.save(
-                new MessageMapper().toMapper(message)
+                new MessageMapper().toMapper(message, isAdmin)
         );
     }
 
